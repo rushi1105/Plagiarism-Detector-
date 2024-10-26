@@ -1,0 +1,210 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #1e3a5f; /* Deep blue background */
+    color: #ffffff; /* White text color for contrast */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background-color: #ff8c00; /* Orange header background */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+header img {
+    border-radius: 58%;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    height: 70px;
+}
+header .logo {
+    font-size: 28px;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main Section Styles */
+.main-section {
+    background-color: #002244; /* Darker blue for contrast */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.main-section h2 {
+    color: #ff8c00; /* Orange for titles */
+    font-size: 24px;
+}
+
+.main-section p {
+    font-size: 14px;
+    color: #ffffff; /* White for readability */
+}
+.main-section .input-container {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    margin-top: 20px; /* Add some margin to the top */
+}
+.main-section textarea {
+    width: 90%;
+    max-width: 600px;
+    height: 150px;
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Press Start 2P', cursive;
+    border: 2px solid #ff8c00; /* Orange border */
+    background-color: #fff;
+    color: #000;
+    margin-bottom: 20px; /* Add space below the textarea */
+    box-sizing: border-box; /* Include padding and border in the total width and height */
+}
+
+.check-button {
+    background-color: #ff8c00; /* Orange button background */
+    color: #fff;
+    border: 2px solid #ffffff;
+    padding: 15px 30px;
+    font-size: 10px;
+    font-family: 'Press Start 2P', Bold;
+    cursor: pointer;
+    display: inline-flexbox;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.check-button:hover {
+    background-color: #9c4002; /* Slightly darker orange on hover */
+}
+
+/* Features Section Styles */
+.features {
+    background-color: #1e3a5f; /* Deep blue for features background */
+    color: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 24px;
+    color: #ff8c00; /* Orange for titles */
+}
+
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.feature-item {
+    width: 30%;
+    background-color: #002244; /* Dark blue background */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ff8c00; /* Orange border */
+    margin: 10px;
+}
+
+.feature-item h3 {
+    color: #ff8c00; /* Orange for headings */
+    margin-bottom: 10px;
+}
+
+/* How It Works Section Styles */
+.how-it-works {
+    background-color: #002244; /* Darker blue background */
+    padding: 50px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.how-it-works h2 {
+    color: #ff8c00; /* Orange for titles */
+}
+
+.how-it-works ol {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+}
+
+.how-it-works ol li {
+    background-color: #1e3a5f; /* Deep blue background */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ff8c00; /* Orange border */
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+    background-color: #1e3a5f; /* Deep blue background */
+    padding: 50px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.testimonials h2 {
+    color: #ff8c00; /* Orange for titles */
+}
+
+.testimonial-item {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #002244; /* Darker blue background */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ff8c00; /* Orange border */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #002244; /* Darker blue background */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer ul li a {
+    color: #ff8c00; /* Orange for links */
+    text-decoration: none;
+}

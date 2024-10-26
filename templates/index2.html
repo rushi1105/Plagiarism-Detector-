@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The ABSOLUTE Plagiarism Checker</title>
+    <link rel="stylesheet" href="styles copy.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="dragon ball.png" alt="Logo">
+        <div class="container">
+            <h1 class="logo">Plagiarism Checker</h1>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <section class="main-section">
+        <div class="container">
+            <h2>Check Your Content for Plagiarism</h2>
+            <p>Our advanced plagiarism checker helps you ensure your content is original and free from plagiarism.</p>
+            <div class="input-container">
+                <textarea id="inputText" class="input-textarea" placeholder="INSERT TEXT INSIDE ME >.<..."></textarea>
+                <button id="checkButton" class="check-button">Check for Plagiarism</button>
+            </div>
+            <div id="result" class="result-container"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>Advanced Algorithms</h3>
+                    <p>Our checker uses state-of-the-art algorithms to detect even the slightest matches.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Multi-Language Support</h3>
+                    <p>Supports multiple languages, ensuring accurate results for diverse content.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Detailed Reports</h3>
+                    <p>Get comprehensive reports with detailed analysis of plagiarism percentage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <ol>
+                <li>Paste your text into the input box above.</li>
+                <li>Click "Check for Plagiarism".</li>
+                <li>Receive a plagiarism report in seconds.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial-item">
+                <p>"I loved how its so easy to use!"</p>
+                <h4>- Sanjana. M.</h4>
+            </div>
+            <div class="testimonial-item">
+                <p>"Hassle free and quite simple!"</p>
+                <h4>- Akhilesh. G.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for handling AJAX request -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#checkButton').on('click', function() {
+                var inputText = $('#inputText').val().trim();
+
+                if (inputText === "") {
+                    $('#result').html('<p>Please enter some text before checking.</p>');
+                    return;
+                }
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/check_plagiarism',
+                    data: { inputText: inputText },
+                    success: function(response) {
+                        var resultHtml = '<p><strong>Similarity Score:</strong> ' + response.similarity_score + '</p>';
+                        resultHtml += '<p><strong>Plagiarism Detected:</strong> ' + (response.is_plagiarism ? 'Yes' : 'No') + '</p>';
+                        $('#result').html(resultHtml);
+                    },
+                    error: function() {
+                        $('#result').html('<p>An error occurred while checking for plagiarism. Please try again later.</p>');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 The ABSOLUTE Plagiarism Checker. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
